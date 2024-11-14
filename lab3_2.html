@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Таймер до Нового Року</title>
+	<style>
+		body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				margin-top: 50px;
+			}
+	</style>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		function updateTimer() {
+			const targetDate = new Date("2025-01-01T00:00:00");
+			let today = new Date();
+			let timeLeft = targetDate.getTime() - today.getTime();
+
+			const day = 86400000;
+			const hour = 3600000;
+			const minute = 60000;
+			const second = 1000;
+
+			let days = Math.floor(timeLeft / day);
+			timeLeft %= day;
+			let hours = Math.floor(timeLeft / hour);
+			timeLeft %= hour;
+			let minutes = Math.floor(timeLeft / minute);
+			timeLeft %= minute;
+			let seconds = Math.floor(timeLeft / second);
+
+			let str = `${days} днів, ${hours} годин, ${minutes} хвилин, ${seconds} секунд.`;
+			document.getElementById("newYearTimer").textContent = "До нового року залишилося " + str;
+		}
+
+		setInterval(updateTimer, 1000);
+		document.body.insertAdjacentHTML('beforeend', '<br><button onclick="window.location.href=\'index.html\'">Назад на головну</button>');
+	</script>
+
+	<div id="newYearTimer"></div>
+	
+</body>
+</html>

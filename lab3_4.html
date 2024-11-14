@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Філяк, ПП-21</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				margin-top: 50px;
+			}
+		</style>
+	</head>	
+	<body>
+		<script>
+			//Опис функції виведення рядка з переходом на новий
+			function PrintBR(txt) { 
+				document.write(txt, "<br />");
+			}
+			// Звертання до функції з передачею фактичних параметрів
+			PrintBR ("Рядок який виведений за допомогою функції"); 
+			PrintBR ("Другий рядок який виведений за допомогою функції"); 
+			PrintBR ("Ще один рядок який виведений за допомогою функції");
+			const backButton = document.createElement("button");
+			backButton.textContent = "Назад";
+			backButton.onclick = function() {
+				window.location.href = "index.html";
+			};
+			document.body.appendChild(backButton);
+		</script>
+	</body>
+</html>

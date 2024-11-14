@@ -1,0 +1,32 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Філяк, ПП-21</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				margin-top: 50px;
+			}
+		</style>
+	</head>	
+	<body>
+		<script>
+			function multiplyNumbers(a, b) {
+				return a * b;
+			}
+			document.write("5 * 4 = ", multiplyNumbers(5, 4)); 
+			let num1 = 7;
+			let num2 = 6;
+			document.write("<br>", num1, " * ", num2, " = ", multiplyNumbers(num1, num2));
+			const backButton = document.createElement("button");
+			backButton.textContent = "Back";
+			backButton.onclick = function() {
+				window.location.href = "index.html";
+			};
+			document.body.appendChild(backButton);
+		</script>
+	</body>
+</html>

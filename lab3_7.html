@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Філяк, ПП-21</title>
+		<style>body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin-top: 50px;
+		}</style>
+	</head>	
+	<body>
+		<script>
+			let i = 5;
+			function f(a, b, c) { 
+				if (a > b) return c;
+				else return b;
+			}
+			document.write("Значення змінної i: " + i.valueOf()); 
+			document.write("<p>Значення змінної f(7, 3, 10): " + f(7, 3, 10));
+			const backButton = document.createElement("button");
+			backButton.textContent = "Назад";
+			backButton.onclick = function() {
+				window.location.href = "index.html";
+			};
+			document.body.appendChild(backButton);
+		</script>
+	</body>
+</html>

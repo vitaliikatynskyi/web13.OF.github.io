@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Філяк, ПП-21</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				margin-top: 50px;
+			}
+		</style>
+	</head>	
+	<body>
+		<script>
+			function multiply(a, factor) { 
+				return a * factor;
+			}
+
+			function calculateExpression(a, func, value) { //
+				return func(a, value) + a - 10;
+			}
+
+			let result = calculateExpression(5, multiply, 20); //
+			document.write("<h2> Result = " + result + "</h2>"); //
+			
+			const backButton = document.createElement("button");
+			backButton.textContent = "Назад";
+			backButton.onclick = function() {
+				window.history.back();
+			};
+			document.body.appendChild(backButton);
+		</script>
+	</body>
+</html>

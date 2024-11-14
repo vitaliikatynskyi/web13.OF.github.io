@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="uk"></html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Використання масиву arguments</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }</style>
+</head>
+<body>
+    <script>
+        function calculateAverage() {
+            if (arguments.length === 0) {
+                alert("Не вказано жодного числа");
+                return;
+            }
+
+            let total = 0;
+            let numbers = [];
+            for (let i = 0; i < arguments.length; i++) {
+                total += arguments[i];
+                numbers.push(arguments[i]);
+            }
+
+            let avg = total / arguments.length;
+            document.write("Числа: ", numbers.join(", "), "<br>");
+            document.write("Середнє значення: ", avg.toFixed(2), "<br>");
+        }
+
+        calculateAverage(5, 10, 15);
+        calculateAverage(2, 4, 6, 8, 10);
+        calculateAverage(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    
+        const backButton = document.createElement("button");
+        backButton.innerHTML = "Назад";
+        backButton.onclick = function() {
+            window.location.href = "index.html";
+        };
+        document.body.appendChild(backButton);
+    </script>
+</body>
+    </script>
+</body>
+
+</html>

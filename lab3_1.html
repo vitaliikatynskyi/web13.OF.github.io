@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Філяк, ПП-21</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				margin-top: 50px;
+			}
+			.day {
+				margin: 10px 0;
+			}
+			#backButton {
+				margin-top: 20px;
+				padding: 10px 20px;
+				font-size: 16px;
+			}
+		</style>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+
+			function createDayElement(size, day, color) {
+				const dayElement = document.createElement("div");
+				dayElement.textContent = day;
+				dayElement.className = "day";
+				dayElement.style.fontSize = size;
+				dayElement.style.color = color;
+				return dayElement;
+			}
+
+			const days = [
+				{ size: "20px", day: "понеділок", color: "red" },
+				{ size: "24px", day: "вівторок", color: "blue" },
+				{ size: "28px", day: "середа", color: "green" },
+				{ size: "32px", day: "четвер", color: "purple" },
+				{ size: "36px", day: "п'ятниця", color: "orange" },
+				{ size: "40px", day: "субота", color: "brown" },
+				{ size: "44px", day: "неділя", color: "teal" }
+			];
+
+			days.forEach(day => {
+				document.body.appendChild(createDayElement(day.size, day.day, day.color));
+			});
+
+			const backButton = document.createElement("button");
+			backButton.textContent = "Назад";
+			backButton.id = "backButton";
+			backButton.onclick = function() {
+				window.location.href = "index.html";
+			};
+			document.body.appendChild(backButton);
+		</script>
+	</body>
+</html>

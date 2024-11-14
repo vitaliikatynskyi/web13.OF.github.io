@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Філяк, ПП-21</title>
+		<style>body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin-top: 50px;
+		}</style>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+			function printText(txt, size = 20) {
+			document.write(`<div style="font-size:${size}pt">${txt}</div>`);
+			}
+			printText("<p>Найбільший шрифт", 36); 
+			printText("<p>Шрифт за замовченням - перший рядок"); 
+			printText("<p>Шрифт за замовченням - другий рядок");
+			printText("<p>Шрифт за замовченням - трєтій рядок");  
+			printText("<p>Манший шрифт ніж попередні рядки", 14);
+				const backButton = document.createElement("button");
+			backButton.textContent = "Назад";
+			backButton.onclick = function() {
+				window.location.href = "index.html";
+			};
+			document.body.appendChild(backButton);
+		</script>
+	</body>
+</html>
